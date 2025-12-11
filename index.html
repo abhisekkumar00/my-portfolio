@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon2.png" type="image/png">
+  <title>Abhishek-Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <span class="port">port</span><span class="folio">folio</span>
+
+    </div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#sevices">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="download-cv">Download-cv <i class="fas fa-download"></i></button>
+  </nav>
+
+
+
+  <!-- home -->
+
+
+
+  <section id="home" class="home">
+    <div class="shape">
+      <img src="dark.png" alt="profile" class="dhruv">
+    </div>
+
+    <div class="content">
+      <h3>Hello, I'm</h3>
+      <h1>Abhishek Kumar</h1>
+      <h3 class="freelancer">And I'm a <span class="dynamic-text">freelancer</span></h3>
+      <p>I am a AI enginner and web developer with 5 years of experience, creating user-friendly digital
+        experiences.</p>
+
+      <div class="social-icons">
+        <a href="https://www.facebook.com/share/1Bd4nn3xGc/" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.linkedin.com/in/abhishek-kumar-884a4139b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+          class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.instagram.com/_dhruv_chandra_?igsh=NmdtZ3l3ajhmcXl5" class="social-icon"><i
+            class="fab fa-instagram"></i></a>
+        <a href="https://youtube.com/@radhe_gamer123?si=IsiNx6tfrs5VsaWB" class="social-icon"><i
+            class="fab fa-youtube"></i></a>
+        <a href="@Dhruv_chandra" class="social-icon"><i class="fab fa-telegram"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+
+      </div>
+      <button class="hire-me">Hire-me</button>
+      <button class="contact-me">Contact-me</button>
+      <button class="offer-me">Offer-me</button>
+    </div>
+
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="about-content">
+      <h2>About Me</h2>
+      <p>I’m Abhishek Kumar,I am a Web Developer and AI Engineer skilled in creating intelligent, user-focused digital
+        experiences. I combine modern web technologies—such as React, Next.js, and Node.js—with machine-learning tools
+        like Python, TensorFlow, and AI APIs to build efficient, scalable applications. </p>
+      <p>My work focuses on transforming data into smart features that enhance automation, personalization, and
+        performance. I am passionate about clean architecture, problem-solving, and continuous innovation. With a strong
+        commitment to quality and emerging technologies, I aim to build future-ready solutions that seamlessly blend web
+        development and artificial intelligence to deliver meaningful impact.</p>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills">
+    <div class="skills-content">
+      <h2>My Skills</h2>
+      <div class="skills-grid">
+        <div class="skill"><i class="fab fa-html5"></i> HTML5</div>
+        <div class="skill"><i class="fab fa-css3-alt"></i> CSS3</div>
+        <div class="skill"><i class="fab fa-js-square"></i> JavaScript</div>
+        <div class="skill"><i class="fab fa-react"></i> React</div>
+        <div class="skill"><i class="fab fa-node"></i> Node.js</div>
+        <div class="skill"><i class="fas fa-database"></i> MongoDB</div>
+        <div class="skill"><i class="fab fa-python"></i> Python</div>
+        <div class="skill"><i class="fas fa-database"></i> SQL</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="sevices" class="services">
+    <div class="services-content">
+      <h2>My Services</h2>
+      <div class="service-boxes">
+        <div class="service-box">
+          <i class="fas fa-laptop-code"></i>
+          <h3>Web Development</h3>
+          <p>"Custom websites using modern frameworks and best practices."</p>
+        </div>
+        <div class="service-box">
+          <i class="fas fa-code pen"></i>
+          <h3>Programmer</h3>
+          <p>"Programmer dedicated to writing clean, efficient code and building reliable solutions."</p>
+        </div>
+        <div class="service-box">
+          <i class="fas fa-robot"></i>
+          <h3>AI Enginner</h3>
+          <p>"AI Engineer passionate about building intelligent systems that solve real-world problems."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="contact-content">
+      <h2>Contact Me</h2>
+      <form class="contact-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="text" placeholder="Your Address" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+
+  <!-- other sections -->
+  <script>
+
+    // 1. Dynamic Typing Effect for "freelancer"
+    const dynamicText = document.querySelector(".dynamic-text");
+    const words = ["freelancer", "developer", "designer", "creator"];
+    let wordIndex = 0;
+    let letterIndex = 0;
+    let isDeleting = false;
+
+    function typeEffect() {
+      const currentWord = words[wordIndex];
+      const visibleText = currentWord.substring(0, letterIndex);
+      dynamicText.textContent = visibleText;
+
+      if (!isDeleting && letterIndex < currentWord.length) {
+        letterIndex++;
+        setTimeout(typeEffect, 150);
+      } else if (isDeleting && letterIndex > 0) {
+        letterIndex--;
+        setTimeout(typeEffect, 80);
+      } else {
+        isDeleting = !isDeleting;
+        if (!isDeleting) {
+          wordIndex = (wordIndex + 1) % words.length;
+        }
+        setTimeout(typeEffect, 1000);
+      }
+    }
+    typeEffect();
+
+
+    // 2. Form Submission Handler (Contact Form)
+    const contactForm = document.querySelector(".contact-form");
+    if (contactForm) {
+      contactForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+        alert("Thank you for reaching out! I will get back to you soon.");
+        contactForm.reset(); // Clears the form
+      });
+    }
+  </script>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,     // animation duration (in ms)
+      easing: "ease-in-out",
+      once: true,         // animation happens only once
+      offset: 120         // offset from the top
+    });
+  </script>
+</body>
+
+</html>
